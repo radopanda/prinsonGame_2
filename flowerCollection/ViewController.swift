@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var flowerImageView: UIImageView!
     
     var count:Int = 0
-    let flowerName: [String] = ["すぅちゃん神", "ゆかるん神", "ひなんちゅ神", "あいにゃん神", "なおきゃん神"]
-    let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow, UIColor.white, UIColor.orange]
-    let imageNames: [String] = ["rose", "nemo", "himawari", "yuri", "tulip"]
+    let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
+    let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
+    let imageNames: [String] = ["image1", "image2", "image3"]
     
     
     override func viewDidLoad() {
@@ -41,8 +41,8 @@ class ViewController: UIViewController {
         flowerLabel.textColor = colors[count]
         // image の変更
         flowerImageView.image = UIImage(named: imageNames[count])
-        
     }
+
 
 }
 
