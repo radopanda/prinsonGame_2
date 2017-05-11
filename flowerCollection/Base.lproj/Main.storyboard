@@ -41,7 +41,7 @@
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
                                 <rect key="frame" x="91" y="434" width="206" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ItemButton"/>
@@ -69,6 +69,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ItemButtonObj" destination="sVY-c4-kyz" id="oW0-4a-p5d"/>
                         <outlet property="flowerImageView" destination="iTw-7F-I3S" id="wyH-Tt-LRO"/>
                         <outlet property="flowerLabel" destination="P6c-PG-tIP" id="1YW-HI-7we"/>
                         <outlet property="itemButton" destination="sVY-c4-kyz" id="iKA-UW-sqi"/>

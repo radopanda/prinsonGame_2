@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     // 背景画像用
     @IBOutlet weak var flowerImageView: UIImageView!
     
+    @IBOutlet weak var ItemButtonObj: UIButton!
     @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
     let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
@@ -43,11 +44,17 @@ class ViewController: UIViewController {
         flowerLabel.textColor = colors[count]
         // image の変更
         flowerImageView.image = UIImage(named: imageNames[count])
+        
+        if getItem {
+            ItemButtonObj.isEnabled=true
+        }else{
+            ItemButtonObj.isEnabled=false
+        }
     }
   
     @IBAction func ItemButton(_ sender: Any) {
-        if flowerName[count] == "部屋２" {
-            print(itemButton)
+        if flowerName[count] == "部屋３" {
+            
         }
     }
 
