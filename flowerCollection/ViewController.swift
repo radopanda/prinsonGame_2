@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
-    let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
+    let flowerName: [String] = ["部屋1", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
     let getItem = false
