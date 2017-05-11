@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
-    let getItem = false
+    let getItem = true
     
     
     override func viewDidLoad() {
@@ -54,7 +54,9 @@ class ViewController: UIViewController {
   
     @IBAction func ItemButton(_ sender: Any) {
         if flowerName[count] == "部屋３" {
-            
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
+            self.present(nextView, animated: true, completion: nil)
         }
     }
 
