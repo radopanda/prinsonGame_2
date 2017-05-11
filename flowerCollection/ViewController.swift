@@ -46,11 +46,30 @@ class ViewController: UIViewController {
     }
   
     @IBAction func ItemButton(_ sender: Any) {
-        if flowerName[count] == "部屋２" {
+        if flowerName[count] == "部屋３" {
             print(itemButton)
         }
     }
 
+    @IBAction func AcquisitionButton(_ sender: Any) {
+        if flowerName[count] == "部屋２" {
+        // アラートを作成
+        let alert = UIAlertController(
+            title: "アラート",
+            message: "アイテムを取得しました",
+            preferredStyle: .alert)
+            
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            let getItem = true
+            print(getItem)
+        }
+    
+    }
     
 
 }
