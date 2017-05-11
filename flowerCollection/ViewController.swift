@@ -15,10 +15,12 @@ class ViewController: UIViewController {
     // 背景画像用
     @IBOutlet weak var flowerImageView: UIImageView!
     
+    @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
     let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
+    let getItem = false
     
     
     override func viewDidLoad() {
@@ -42,7 +44,14 @@ class ViewController: UIViewController {
         // image の変更
         flowerImageView.image = UIImage(named: imageNames[count])
     }
+  
+    @IBAction func ItemButton(_ sender: Any) {
+        if flowerName[count] == "部屋２" {
+            print(itemButton)
+        }
+    }
 
+    
 
 }
 
