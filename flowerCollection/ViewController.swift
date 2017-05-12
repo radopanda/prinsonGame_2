@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ItemButtonObj: UIButton!
     @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
-    let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
+    let flowerName: [String] = ["部屋1", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
     let getItem = true
@@ -54,12 +54,32 @@ class ViewController: UIViewController {
   
     @IBAction func ItemButton(_ sender: Any) {
         if flowerName[count] == "部屋３" {
+           print(itemButton)
             let storyboard: UIStoryboard = self.storyboard!
             let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
             self.present(nextView, animated: true, completion: nil)
+
         }
     }
 
+    @IBAction func AcquisitionButton(_ sender: Any) {
+        if flowerName[count] == "部屋２" {
+        // アラートを作成
+        let alert = UIAlertController(
+            title: "お知らせ",
+            message: "アイテムを取得しました",
+            preferredStyle: .alert)
+            
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+            let getItem = true
+            print(getItem)
+        }
+    
+    }
     
 
 }

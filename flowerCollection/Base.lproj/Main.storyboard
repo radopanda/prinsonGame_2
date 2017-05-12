@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,40 +32,48 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
-                                <rect key="frame" x="80" y="534" width="257" height="132"/>
-                                <state key="normal" title="すぅちゃん好き" image="butterfly124x124">
-                                    <color key="titleColor" red="0.94259026297987736" green="1" blue="0.99247947634919698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
-                                <rect key="frame" x="91" y="434" width="206" height="73"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
+                                <rect key="frame" x="134" y="601" width="107" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ItemButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="使用"/>
                                 <connections>
                                     <action selector="ItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PD-2l-mUU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
+                                <rect key="frame" x="91" y="434" width="206" height="73"/>
+
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="取得"/>
+                                <connections>
+                                    <action selector="AcquisitionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eY-5R-zv0"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uBq-V4-dPg">
+                                <rect key="frame" x="249" y="535" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                        <state key="normal" image="butterfly124x124"/>
+                                        <connections>
+                                            <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P6c-PG-tIP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="DB0-9f-pbd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Tr-Qo-jaK" secondAttribute="trailing" constant="63" id="EZy-DX-kk3"/>
                             <constraint firstAttribute="trailing" secondItem="iTw-7F-I3S" secondAttribute="trailing" id="JrU-iS-guL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P6c-PG-tIP" secondAttribute="trailing" constant="42" id="MWq-tR-hPq"/>
                             <constraint firstItem="P6c-PG-tIP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oqx-Xb-hrI"/>
-                            <constraint firstItem="5Tr-Qo-jaK" firstAttribute="top" secondItem="P6c-PG-tIP" secondAttribute="bottom" constant="469" id="UGv-FZ-Q3V"/>
-                            <constraint firstItem="5Tr-Qo-jaK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="bGy-rJ-7vw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Tr-Qo-jaK" secondAttribute="bottom" constant="2" id="biz-Wl-kbN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Tr-Qo-jaK" secondAttribute="bottom" constant="2" id="iba-7A-M1R"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kCv-2g-QDS"/>
-                            <constraint firstItem="5Tr-Qo-jaK" firstAttribute="top" secondItem="P6c-PG-tIP" secondAttribute="bottom" constant="469" id="nMU-YB-gRB"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uTY-nh-H67"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iTw-7F-I3S" secondAttribute="bottom" id="viT-Wy-ter"/>
-                            <constraint firstItem="5Tr-Qo-jaK" firstAttribute="top" secondItem="P6c-PG-tIP" secondAttribute="bottom" constant="469" id="wqA-LL-ex7"/>
                         </constraints>
                     </view>
                     <connections>
