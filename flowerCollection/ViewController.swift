@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
-    let getItem = true
+    var getItem = false
     
     
     override func viewDidLoad() {
@@ -57,9 +57,45 @@ class ViewController: UIViewController {
             let storyboard: UIStoryboard = self.storyboard!
             let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
             self.present(nextView, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "何も起きませんでした。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
+    @IBAction func getItemButton(_ sender: Any) {
+        if flowerName[count] == "部屋２" {
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "アイテムを取得しました",
+                preferredStyle: .alert)
+            
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+            self.getItem = true
+            print(getItem)
+        }else{
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "何もありません。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
     
 
 }
