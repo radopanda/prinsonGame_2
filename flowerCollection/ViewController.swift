@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         if flowerName[count] == "部屋２" {
         // アラートを作成
         let alert = UIAlertController(
-            title: "アラート",
+            title: "お知らせ",
             message: "アイテムを取得しました",
             preferredStyle: .alert)
             
@@ -63,7 +63,6 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             // アラート表示
             self.present(alert, animated: true, completion: nil)
-            
             
             let getItem = true
             print(getItem)
