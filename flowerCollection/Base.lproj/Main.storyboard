@@ -91,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="yuri" translatesAutoresizingMaskIntoConstraints="NO" id="HhL-ST-1o6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_3168" translatesAutoresizingMaskIntoConstraints="NO" id="HhL-ST-1o6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ゲームをコンプリートしました！" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="BXf-El-Udx">
@@ -127,12 +127,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic7-3B-sRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552.79999999999995" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="714" y="70"/>
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_3168" width="900" height="1200"/>
         <image name="butterfly124x124" width="124" height="124"/>
         <image name="image1" width="2448" height="3264"/>
-        <image name="yuri" width="400" height="300"/>
     </resources>
 </document>
