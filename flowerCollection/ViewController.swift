@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIGestureRecognizerDelegate {
 
     // ラベルがつながっているやつ
     @IBOutlet weak var flowerLabel: UILabel!
@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+     
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.tap(_:)))
+        // デリゲートをセット
+        tapGesture.delegate = self;
+    self.view.addGestureRecognizer(tapGesture)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +103,39 @@ class ViewController: UIViewController {
         }
     }
     
-
+    // タップイベント.
+    func tap(_ sender: UITapGestureRecognizer){
+        print("タップ")
+        if flowerName[count] == "部屋２" && getItem == false{
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "アイテムを取得しました",
+                preferredStyle: .alert)
+            
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+            self.getItem = true
+            print(getItem)
+        }else if flowerName[count] == "部屋３" && getItem == true {
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
+            self.present(nextView, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "何も起きませんでした。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+        }
+    
+    }
+    
 }
 
