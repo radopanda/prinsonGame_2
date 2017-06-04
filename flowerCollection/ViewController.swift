@@ -15,10 +15,18 @@ class ViewController: UIViewController {
     // 背景画像用
     @IBOutlet weak var flowerImageView: UIImageView!
     
+    @IBOutlet weak var ItemButtonObj: UIButton!
+    @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
     let flowerName: [String] = ["部屋１", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
+    var getNumber1Item = true
+    var getNumber2Item = false
+    var getNumber3Item = true
+    @IBOutlet weak var item1Obj: UIImageView!
+    @IBOutlet weak var item2Obj: UIImageView!
+    @IBOutlet weak var item3Obj: UIImageView!
     
     
     override func viewDidLoad() {
@@ -41,8 +49,58 @@ class ViewController: UIViewController {
         flowerLabel.textColor = colors[count]
         // image の変更
         flowerImageView.image = UIImage(named: imageNames[count])
+        
+        if getNumber1Item {
+            item1Obj.isHidden = false
+        }else{
+            item1Obj.isHidden=true
+        }
+    }
+  
+    @IBAction func ItemButton(_ sender: Any) {
+        if flowerName[count] == "部屋３" {
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
+            self.present(nextView, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "何も起きませんでした。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
+    @IBAction func getItemButton(_ sender: Any) {
+        if flowerName[count] == "部屋２" {
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "アイテムを取得しました",
+                preferredStyle: .alert)
+            
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+            self.getNumber1Item = true
+        }else{
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "何もありません。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
 
 }
 
