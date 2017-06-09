@@ -75,36 +75,6 @@
                                 <rect key="frame" x="247" y="417" width="124" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elC-cy-oZM">
-                                <rect key="frame" x="-9" y="455" width="140" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="取得"/>
-                                <connections>
-                                    <action selector="getItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zb2-Eu-0dK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-c4-kyz">
-                                <rect key="frame" x="119" y="512" width="120" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="15"/>
-                                <state key="normal" title="使用">
-                                    <color key="titleColor" red="0.96913212537765503" green="0.74487811326980591" blue="0.90101093053817749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="ItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PD-2l-mUU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
-                                <rect key="frame" x="251" y="417" width="124" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="butterfly124x124">
-                                    <color key="titleColor" red="0.94259026297987736" green="1" blue="0.99247947634919698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
-                                </connections>
-                            </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item1" translatesAutoresizingMaskIntoConstraints="NO" id="BAC-Eo-tFd">
                                 <rect key="frame" x="0.0" y="599" width="115" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -113,6 +83,16 @@
                                 <rect key="frame" x="130" y="599" width="115" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
+                                <rect key="frame" x="144" y="445" width="87" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_next">
+                                    <color key="titleColor" red="0.94259026297987736" green="1" blue="0.99247947634919698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -123,12 +103,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ItemButtonObj" destination="sVY-c4-kyz" id="oW0-4a-p5d"/>
                         <outlet property="flowerImageView" destination="iTw-7F-I3S" id="wyH-Tt-LRO"/>
                         <outlet property="item1Obj" destination="BAC-Eo-tFd" id="HMS-fc-7cJ"/>
                         <outlet property="item2Obj" destination="VeH-x0-mTa" id="Mkn-fB-4nw"/>
                         <outlet property="item3Obj" destination="Dl2-eD-g40" id="BgF-GK-gpT"/>
-                        <outlet property="itemButton" destination="sVY-c4-kyz" id="iKA-UW-sqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -189,7 +167,7 @@
     <resources>
         <image name="IMG_3168" width="900" height="1200"/>
         <image name="btn_enter" width="920" height="168"/>
-        <image name="butterfly124x124" width="124" height="124"/>
+        <image name="btn_next" width="124" height="124"/>
         <image name="image1" width="2448" height="3264"/>
         <image name="item1" width="480" height="286"/>
         <image name="item2" width="620" height="492"/>
