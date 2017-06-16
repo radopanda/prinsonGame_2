@@ -21,6 +21,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     let flowerName: [String] = ["部屋1", "部屋２", "部屋３"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image1", "image2", "image3"]
+
+
+    
     @IBOutlet weak var item1Obj: UIImageView!
     @IBOutlet weak var item2Obj: UIImageView!
     @IBOutlet weak var item3Obj: UIImageView!
@@ -123,8 +126,26 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     func tap(_ sender: UITapGestureRecognizer){
         
         print("タップ")
+let image = UIImage(named: imageNames[count])!
         
-        if flowerName[count] == "部屋２" && getNumber1Item == false{
+//var myImageView = flowerImageView
+        
+        //表示されている画像のタップ座標用変数
+        var tapPoint = CGPoint(x: 0, y: 0)
+        //元の画像のタップ座標用変数
+        var originalTapPoint = CGPoint(x: 0, y: 0)
+        
+        //ImageView上のタップ座標を取得
+        tapPoint = sender.location(in: flowerImageView)
+        
+        //サイズの倍率を算出し、UIImage上でのタップ座標を求める
+        originalTapPoint.x = image.size.width/flowerImageView.frame.width * tapPoint.x
+        originalTapPoint.y = image.size.height/flowerImageView.frame.height * tapPoint.y
+        
+        print(round(originalTapPoint.x))
+        print(round(originalTapPoint.y))
+        
+        if flowerName[count] == "部屋２" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber1Item == false{
             
             // アラートを作成
             
@@ -136,8 +157,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
                 
                 preferredStyle: .alert)
             
-            
-            
             // アラートにボタンをつける
             
             alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -146,13 +165,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             
             self.present(alert, animated: true, completion: nil)
             
-            
-            
             self.getNumber1Item = true
             
             print(getNumber1Item)
             
-        }else if flowerName[count] == "部屋３" && getNumber1Item == true {
+        }else if flowerName[count] == "部屋３" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber1Item == true {
             
             let storyboard: UIStoryboard = self.storyboard!
             
