@@ -18,16 +18,19 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var ItemButtonObj: UIButton!
     @IBOutlet weak var itemButton: UIButton!
     var count:Int = 0
-    let flowerName: [String] = ["部屋1", "部屋２", "部屋３"]
+    let flowerName: [String] = ["部屋1","部屋2","部屋3","部屋4","部屋5"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image2", "image1", "image4", "image6", "image3"]
     @IBOutlet weak var item1Obj: UIImageView!
     @IBOutlet weak var item2Obj: UIImageView!
     @IBOutlet weak var item3Obj: UIImageView!
+
+    var ItemUse: [Bool] = [false]
     
     var getNumber1Item = false{
         willSet {
             item1Obj.isHidden=true
+
         }
         didSet {
             item1Obj.isHidden = false
@@ -99,53 +102,63 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         
         print(round(originalTapPoint.x))
         print(round(originalTapPoint.y))
-        
+        //銀の鍵取得
         if flowerName[count] == "部屋1" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber1Item == false{
-            
             // アラートを作成
-            
             let alert = UIAlertController(
-                
                 title: "お知らせ",
-                
-                message: "アイテムを取得しました",
-                
+                message: "銀の鍵を取得しました",
                 preferredStyle: .alert)
-            
             // アラートにボタンをつける
-            
             alert.addAction(UIAlertAction(title: "OK", style: .default))
-            
             // アラート表示
-            
             self.present(alert, animated: true, completion: nil)
-            
             self.getNumber1Item = true
+        //銀の鍵使用
+        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber1Item == true{
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "銀の鍵を使用しました。牢屋の中を探索できます。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            self.getNumber1Item = false
             
-            print(getNumber1Item)
+            // アイテム使用の判定を追加
+            ItemUse[0] = true
             
-        }else if flowerName[count] == "部屋3" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber1Item == true {
+            //金の鍵取得
+        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber2Item == false && ItemUse[0] == true {
+
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "銀の鍵を使用しました。牢屋の中を探索できます。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            self.getNumber1Item = false
             
+            
+        }else if flowerName[count] == "部屋5" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber1Item == true {
             let storyboard: UIStoryboard = self.storyboard!
-            
             let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
             self.present(nextView, animated: true, completion: nil)
         }else{
-            
             let alert = UIAlertController(
                 title: "お知らせ",
                 message: "何も起きませんでした。",
                 preferredStyle: .alert)
             // アラートにボタンをつける
-            
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             // アラート表示
             self.present(alert, animated: true, completion: nil)
-            
         }
-        
-        
-        
     }
 }
 
