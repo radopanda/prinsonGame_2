@@ -67,9 +67,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item3" translatesAutoresizingMaskIntoConstraints="NO" id="Dl2-eD-g40">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="item_light" translatesAutoresizingMaskIntoConstraints="NO" id="Dl2-eD-g40">
                                 <rect key="frame" x="260" y="599" width="115" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="H4S-C5-y4U"/>
+                                    <constraint firstAttribute="width" constant="115" id="lbZ-07-opD"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-HL-EiZ">
                                 <rect key="frame" x="247" y="417" width="124" height="124"/>
@@ -86,13 +89,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item1" translatesAutoresizingMaskIntoConstraints="NO" id="BAC-Eo-tFd">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item_key_silver" translatesAutoresizingMaskIntoConstraints="NO" id="BAC-Eo-tFd">
                                 <rect key="frame" x="0.0" y="599" width="115" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="2t6-HU-xRS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="IfW-He-caA"/>
+                                    <constraint firstAttribute="width" constant="115" id="T0P-j8-ioQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="xtY-QU-VyF"/>
+                                </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item2" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-x0-mTa">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="item_key" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-x0-mTa">
                                 <rect key="frame" x="130" y="599" width="115" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="OVA-il-MYG"/>
+                                    <constraint firstAttribute="width" constant="115" id="Ukn-M2-DjV"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-JK-FRA">
                                 <rect key="frame" x="-5" y="417" width="124" height="124"/>
@@ -106,9 +117,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iTw-7F-I3S" secondAttribute="trailing" id="JrU-iS-guL"/>
+                            <constraint firstItem="BAC-Eo-tFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L4R-yh-SY8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BAC-Eo-tFd" secondAttribute="bottom" id="YCB-Ir-zkG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VeH-x0-mTa" secondAttribute="bottom" id="eLe-Om-p0K"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kCv-2g-QDS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dl2-eD-g40" secondAttribute="bottom" id="mei-Cv-WXT"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uTY-nh-H67"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iTw-7F-I3S" secondAttribute="bottom" id="viT-Wy-ter"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VeH-x0-mTa" secondAttribute="bottom" id="vyW-eP-bzI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BAC-Eo-tFd" secondAttribute="bottom" id="wKs-ss-ELa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dl2-eD-g40" secondAttribute="bottom" id="ylI-PW-1hu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -179,9 +197,9 @@
         <image name="btn_enter" width="920" height="168"/>
         <image name="btn_next" width="124" height="124"/>
         <image name="image2" width="2448" height="3264"/>
-        <image name="item1" width="480" height="286"/>
-        <image name="item2" width="620" height="492"/>
-        <image name="item3" width="500" height="500"/>
+        <image name="item_key" width="490" height="490"/>
+        <image name="item_key_silver" width="490" height="490"/>
+        <image name="item_light" width="490" height="490"/>
         <image name="title" width="2448" height="3264"/>
     </resources>
 </document>

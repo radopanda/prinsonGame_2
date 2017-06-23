@@ -21,6 +21,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     let flowerName: [String] = ["部屋1", "部屋2", "部屋3", "部屋4", "部屋5"]
     let colors: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow]
     let imageNames: [String] = ["image2", "image1", "image4", "image6", "image3"]
+    
     @IBOutlet weak var item1Obj: UIImageView!
     @IBOutlet weak var item2Obj: UIImageView!
     @IBOutlet weak var item3Obj: UIImageView!
