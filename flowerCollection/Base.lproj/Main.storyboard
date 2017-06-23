@@ -63,7 +63,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-7F-I3S">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-7F-I3S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -74,6 +74,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-HL-EiZ">
                                 <rect key="frame" x="247" y="417" width="124" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                        <state key="normal" image="btn_next">
+                                            <color key="titleColor" red="0.94259026297987736" green="1" blue="0.99247947634919698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item1" translatesAutoresizingMaskIntoConstraints="NO" id="BAC-Eo-tFd">
                                 <rect key="frame" x="0.0" y="599" width="115" height="68"/>
@@ -83,14 +94,12 @@
                                 <rect key="frame" x="130" y="599" width="115" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tr-Qo-jaK">
-                                <rect key="frame" x="144" y="445" width="87" height="102"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-JK-FRA">
+                                <rect key="frame" x="-5" y="417" width="124" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="btn_next">
-                                    <color key="titleColor" red="0.94259026297987736" green="1" blue="0.99247947634919698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" image="btn_back"/>
                                 <connections>
-                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-Jy-ONI"/>
+                                    <action selector="backbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xh9-HC-vbH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,9 +175,10 @@
     </scenes>
     <resources>
         <image name="IMG_3168" width="900" height="1200"/>
+        <image name="btn_back" width="124" height="124"/>
         <image name="btn_enter" width="920" height="168"/>
         <image name="btn_next" width="124" height="124"/>
-        <image name="image1" width="2448" height="3264"/>
+        <image name="image2" width="2448" height="3264"/>
         <image name="item1" width="480" height="286"/>
         <image name="item2" width="620" height="492"/>
         <image name="item3" width="500" height="500"/>
