@@ -115,7 +115,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             self.present(alert, animated: true, completion: nil)
             self.getNumber1Item = true
         //銀の鍵使用
-        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber1Item == true{
+        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 590 && round(originalTapPoint.x) < 1655 && round(originalTapPoint.y) > 2670 && round(originalTapPoint.y) < 2980 && getNumber1Item == true{
             // アラートを作成
             let alert = UIAlertController(
                 title: "お知らせ",
@@ -129,22 +129,40 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             
             // アイテム使用の判定を追加
             ItemUse[0] = true
-            
-            //金の鍵取得
+        //金の鍵取得
         }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber2Item == false && ItemUse[0] == true {
 
             // アラートを作成
             let alert = UIAlertController(
                 title: "お知らせ",
-                message: "銀の鍵を使用しました。牢屋の中を探索できます。",
+                message: "金の鍵を取得しました",
                 preferredStyle: .alert)
             // アラートにボタンをつける
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             // アラート表示
             self.present(alert, animated: true, completion: nil)
-            self.getNumber1Item = false
+            self.getNumber2Item = true
+            //ブラックライト取得
+        }else if flowerName[count] == "部屋4" && round(originalTapPoint.x) > 1050 && round(originalTapPoint.x) < 1200 && round(originalTapPoint.y) > 1850 && round(originalTapPoint.y) < 2000 && getNumber3Item == false{
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "お知らせ",
+                message: "ブラックライトを取得しました",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            self.getNumber3Item = true
+        //ゲームオーバー
+        }else if flowerName[count] == "部屋4" && round(originalTapPoint.x) > 600 && round(originalTapPoint.x) < 1700 && round(originalTapPoint.y) > 250 && round(originalTapPoint.y) < 1850 && getNumber3Item == true {
+        //画像紐づけて
+            //let storyboard: UIStoryboard = self.storyboard!
+            //let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
+            //self.present(nextView, animated: true, completion: nil)
             
-            
+            //コンプリート
+        //画像変えて
         }else if flowerName[count] == "部屋5" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber1Item == true {
             let storyboard: UIStoryboard = self.storyboard!
             let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
