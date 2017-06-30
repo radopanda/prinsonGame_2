@@ -152,17 +152,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_3168" translatesAutoresizingMaskIntoConstraints="NO" id="HhL-ST-1o6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="complete" translatesAutoresizingMaskIntoConstraints="NO" id="HhL-ST-1o6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ゲームをコンプリートしました！" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="BXf-El-Udx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="0.18828518377518533" blue="0.323884433832067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GameComplete !!" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-So-qL7">
+                                <rect key="frame" x="0.0" y="53" width="375" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.18828518380000001" blue="0.32388443379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -188,14 +187,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic7-3B-sRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="-107"/>
+            <point key="canvasLocation" x="1157.5999999999999" y="-107.49625187406298"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_3168" width="900" height="1200"/>
         <image name="btn_back" width="124" height="124"/>
         <image name="btn_enter" width="920" height="168"/>
         <image name="btn_next" width="124" height="124"/>
+        <image name="complete" width="2448" height="3264"/>
         <image name="image2" width="2448" height="3264"/>
         <image name="item_key" width="490" height="490"/>
         <image name="item_key_silver" width="490" height="490"/>
