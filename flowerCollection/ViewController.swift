@@ -130,7 +130,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             // アイテム使用の判定を追加
             ItemUse[0] = true
         //金の鍵取得
-        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 1076 && round(originalTapPoint.x) < 1280 && round(originalTapPoint.y) > 1685 && round(originalTapPoint.y) < 1778 && getNumber2Item == false && ItemUse[0] == true {
+        }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 350 && round(originalTapPoint.x) < 625 && round(originalTapPoint.y) > 1125 && round(originalTapPoint.y) < 1350 && getNumber2Item == false && ItemUse[0] == true {
 
             // アラートを作成
             let alert = UIAlertController(
