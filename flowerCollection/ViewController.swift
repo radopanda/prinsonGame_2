@@ -163,7 +163,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             
             //コンプリート
         //画像変えて
-        }else if flowerName[count] == "部屋5" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber1Item == true {
+        }else if flowerName[count] == "部屋5" && round(originalTapPoint.x) > 1023 && round(originalTapPoint.x) < 1180 && round(originalTapPoint.y) > 1160 && round(originalTapPoint.y) < 1348 && getNumber2Item == true {
             let storyboard: UIStoryboard = self.storyboard!
             let nextView = storyboard.instantiateViewController(withIdentifier: "next") as! NextViewController
             self.present(nextView, animated: true, completion: nil)
