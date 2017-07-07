@@ -95,11 +95,11 @@
                                     <constraint firstAttribute="height" constant="68" id="2t6-HU-xRS"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="IfW-He-caA"/>
                                     <constraint firstAttribute="width" constant="115" id="T0P-j8-ioQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="xtY-QU-VyF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="1" id="xtY-QU-VyF"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="item_key" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-x0-mTa">
-                                <rect key="frame" x="130" y="599" width="115" height="68"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="item_key" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-x0-mTa">
+                                <rect key="frame" x="123" y="599" width="115" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="OVA-il-MYG"/>
                                     <constraint firstAttribute="width" constant="115" id="Ukn-M2-DjV"/>
@@ -119,9 +119,10 @@
                             <constraint firstAttribute="trailing" secondItem="iTw-7F-I3S" secondAttribute="trailing" id="JrU-iS-guL"/>
                             <constraint firstItem="BAC-Eo-tFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L4R-yh-SY8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BAC-Eo-tFd" secondAttribute="bottom" id="YCB-Ir-zkG"/>
+                            <constraint firstItem="VeH-x0-mTa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BAC-Eo-tFd" secondAttribute="trailing" constant="8" symbolic="YES" id="bVI-lV-qM7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VeH-x0-mTa" secondAttribute="bottom" id="eLe-Om-p0K"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kCv-2g-QDS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dl2-eD-g40" secondAttribute="bottom" id="mei-Cv-WXT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dl2-eD-g40" secondAttribute="bottom" placeholder="YES" id="mei-Cv-WXT"/>
                             <constraint firstItem="iTw-7F-I3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uTY-nh-H67"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iTw-7F-I3S" secondAttribute="bottom" id="viT-Wy-ter"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VeH-x0-mTa" secondAttribute="bottom" id="vyW-eP-bzI"/>

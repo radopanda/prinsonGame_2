@@ -39,18 +39,18 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     var getNumber2Item = false{
         willSet {
-            item1Obj.isHidden=true
+            item2Obj.isHidden=true
         }
         didSet {
-            item1Obj.isHidden = false
+            item2Obj.isHidden = false
         }
     }
     var getNumber3Item = false{
         willSet {
-            item1Obj.isHidden=true
+            item3Obj.isHidden=true
         }
         didSet {
-            item1Obj.isHidden = false
+            item3Obj.isHidden = false
         }
     }
     
@@ -115,6 +115,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             // アラート表示
             self.present(alert, animated: true, completion: nil)
             self.getNumber1Item = true
+            
         //銀の鍵使用
         }else if flowerName[count] == "部屋2" && round(originalTapPoint.x) > 590 && round(originalTapPoint.x) < 1655 && round(originalTapPoint.y) > 2670 && round(originalTapPoint.y) < 2980 && getNumber1Item == true{
             // アラートを作成
@@ -127,7 +128,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             // アラート表示
             self.present(alert, animated: true, completion: nil)
             self.getNumber1Item = false
-            
+            // item画像の非表示
+            item1Obj.isHidden=true
             // アイテム使用の判定を追加
             ItemUse[0] = true
         //金の鍵取得
